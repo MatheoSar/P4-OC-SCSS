@@ -5,6 +5,7 @@
 }
 
 .img-resto {
+    object-fit: cover;
     width: 375px;
     height: 275px;
 }
@@ -30,19 +31,19 @@
 
 .entrées {
     font-family: 'Roboto', sans-serif;
-        span{
-            position: absolute;
-            left: 17px;
-            top: 90px;
-        }
-        .souligne {
-            position: absolute;
-            margin-left: 13px;
-            width: 40px;
-            border-bottom: 4px solid $colorTertiaire;
-            left: 5px;
-            top: 110px;
-        }
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.souligne {
+    transform: translate(-15px,-80px);
+    margin-left: 13px;
+    width: 40px;
+    border-bottom: 4px solid $colorTertiaire;
+}
+
+.title-pos{
+    transform: translate(0px, -80px)
 }
 
 .ent {
@@ -57,3 +58,20 @@
             margin-left: 15px;
         }
 }
+
+.plats, .desserts {
+    @extend .entrées;
+        
+}
+
+.plt, .dsrt {
+    @extend .ent;
+        .plt-body, .dsrt-body{
+            @extend .ent-body;
+        }
+}
+
+.btn-fin{
+    @include flexMid;
+}
+

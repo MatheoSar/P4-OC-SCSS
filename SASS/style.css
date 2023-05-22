@@ -242,6 +242,8 @@ footer a {
 }
 
 .img-resto {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 375px;
   height: 275px;
 }
@@ -267,24 +269,24 @@ footer a {
   transform: translate(280px, -140px);
 }
 
-.entrées {
+.entrées, .plats, .desserts {
   font-family: "Roboto", sans-serif;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
-.entrées span {
-  position: absolute;
-  left: 17px;
-  top: 90px;
-}
-.entrées .souligne {
-  position: absolute;
+
+.souligne {
+  transform: translate(-15px, -80px);
   margin-left: 13px;
   width: 40px;
   border-bottom: 4px solid #99E2D0;
-  left: 5px;
-  top: 110px;
 }
 
-.ent {
+.title-pos {
+  transform: translate(0px, -80px);
+}
+
+.ent, .plt, .dsrt {
   width: 349px;
   height: 69px;
   border-radius: 15px;
@@ -295,8 +297,14 @@ footer a {
   margin-bottom: 20px;
   transform: translate(0px, -50px);
 }
-.ent .ent-body {
+.ent .ent-body, .plt .ent-body, .plt .plt-body, .plt .dsrt-body, .dsrt .ent-body, .dsrt .plt-body, .dsrt .dsrt-body {
   width: 287px;
   height: 50px;
   margin-left: 15px;
+}
+
+.btn-fin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
